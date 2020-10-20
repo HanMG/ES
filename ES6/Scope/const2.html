@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const2</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    function home(){
+        const list = [
+            "apple",
+            "orange",
+            "watermelon"        
+        ];
+        list.push("banana");
+        console.log(list);            
+        let result = document.getElementById("result")
+        result.innerHTML = list;
+    }
+
+    home(); 
+    // const도 배열과 오브젝트의 값을 변경(추가, 삭제) 하는 것은 가능하다.
+
+    // immutable array를 어떻게 만들까?    
+    const list = ["apple","orange","watermelon"];
+    // 리스트는 두고 
+    list2 = [].concat(list, "banana");
+    console.log(list === list2);
+    
+</script>
+</html>

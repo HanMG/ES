@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const1</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    function home(){
+        var homename = 'my house';
+        homename = "your house";
+        console.log(homename);            
+        let result = document.getElementById("result").innerHTML = homename;
+    }
+
+    home(); // const시 덮어 쓰기가 안되므로 ERROR
+</script>
+</html>
