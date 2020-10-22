@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string methods</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    function home(){
+    // ES6에 추가된 string 메서드들.
+    
+    let str = "hello world !";
+    let strStart = "hello";
+    let strEnd = "!";
+
+    // 시작비교 startsWith
+    console.log("startsWith test", str.startsWith(strStart));
+    // 끝 비교 endsWith
+    console.log("endsWith test", str.endsWith(strEnd));
+    // 포함하는지 includes
+    console.log("include test ", str.includes("wor"));
+    }
+
+    home(); 
+    
+</script>
+</html>
