@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    function home(){
+    var data = [1,2,undefined,NaN,null,""];
+    // for in 사용시 아래의 fucntion()이 의도치않게 마지막에 들어가게됨
+    // 배열 사용시 for, forEach, forOf를 사용하도록 하자
+    Array.prototype.getIndex = function(){};
+    
+    for(let value of data){
+       console.log(value);
+    }  
+    
+
+    var str = "hello world!!!";
+    // 빈칸을 포함한 모든 값이 출력됨    
+    for(let value of str){
+        console.log(value);
+    }
+
+    
+    }
+
+
+
+    home(); 
+    
+</script>
+</html>
