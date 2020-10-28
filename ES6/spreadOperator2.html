@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread operator</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    function home(){
+        // spread operator 활용
+        
+        let pre = [100, 200, "hello", null];
+        // 중간에 값을 껴넣을때
+        let newData = [0,1,2,3, ...pre, 4];
+        console.log("pre = ",pre);
+        console.log("newData =",newData);        
+
+        function sum(a,b,c,){
+            return a+b+c;
+        }
+        pre = [100,200,300];
+        console.log("pre = ",pre);
+        
+        // 구방식 
+        console.log("sum = ",sum.apply(null, pre));        
+        // 배열파라미터로 넘겨줄때
+        console.log("sun = ",sum(...pre));
+
+    }
+    home(); 
+    
+</script>
+</html>
