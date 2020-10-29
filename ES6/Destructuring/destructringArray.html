@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring 구조분해할당</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    //Destructuring 구조분해할당
+    let data = ["crong","honux","jk","jinny"];
+    // 이전방식
+    // let jisu = data[0];
+    // let jung = data[2];
+
+    let[jisu,,jung] = data;
+    console.log(jisu, jung);
+</script>
+</html>

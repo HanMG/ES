@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring 구조분해할당</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    //Destructuring 구조분해할당
+    var news = [
+        {
+            "title" : "sbs",
+            "imgurl" : "http://static.naver.net/newstand/2020/1030/img/000.jpg",
+            "newslist" :[
+                "삼성 이건희 별세",
+                "애플 팀쿡 화환",
+                "사이버펑크2077 연기",
+                "AI시대"
+            ]
+        },
+        {
+            "title":"mbc",
+            "imgurl":"http://static.naver.net/newsstand/2020/1030/img/001.jpg",
+            "newslist":[
+                "blabla",
+                "ereqweqw",
+                "qweqwe2123",
+                "qweqwe21"
+            ]
+        }
+    ];
+
+    // let[,mbc] = news;    
+    // console.log(mbc);
+    // let {title, imgurl} = mbc;
+    // console.log(title, imgurl);
+
+    let[, {title, imgurl}] = news;
+    console.log(title,imgurl);
+</script>
+</html>
