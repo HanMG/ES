@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    function home(){
+        let mySet = new Set();
+        //console.log(toString.call(mySet));
+
+        // set : 중복없이 유일한 값을 저장하려고 할때. 이미 존재하는지 체크할때 유용.
+        // 배열에 유사하다함
+
+        mySet.add("crong");
+        mySet.add("hary");
+        mySet.add("crong"); // Err는 안생기지만 중복된 값은 추가가 안됨
+
+        // has를 통해 있는지 확인 가능
+        console.log(mySet.has("crong"));
+
+        // delete를 통해 제거도 가능
+        mySet.delete("crong");
+
+        mySet.forEach(function(v){
+            console.log(v);
+        })
+    }
+    home(); 
+    
+</script>
+</html>

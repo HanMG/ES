@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weakSet</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    function home(){
+        // weakset
+        // 참조를 가지고 있는 객체만 저장이 가능하다.
+        // 객체형태를 중복없이 저장하려고 할때 유용.
+
+        let arr = [1,2,3,4];
+        let arr2 = [5,6,7,8];
+        let obj = {arr, arr2};
+        let ws = new WeakSet();
+
+        ws.add(arr);
+        ws.add(arr2);
+        ws.add(obj);
+        // 위의 것을 실행해보니 순서대로 나오지않고 랜덤으로나옴
+
+        // ws.add(111); // err invalid value
+        // ws.add("111"); // err invalid value
+        // ws.add(null); // err invalid value
+        // ws.add(function(){}); // 참조를 가지고 있는 객체라 저장됨
+        // 객체가 null이 되거나 필요가 없어지면 가비지컬렉션대상인데 그러면 weakset에서도 사라진다함.
+        
+        console.log(ws);
+    }
+    home(); 
+    
+</script>
+</html>
