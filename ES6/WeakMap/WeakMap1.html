@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeakMap</title>
+</head>
+
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    // weakmap활용
+    // weakmap 클래스 인스턴스 변수 보호하기
+
+    const wm = new WeakMap();
+    function Area(height, width){
+        wm.set(this, {height, width});
+    }
+
+    Area.prototype.getArea = function(){
+        const {height, width} = wm.get(this);
+        return height * width;
+    }
+
+    let myarea = new Area(10,20);
+
+    console.log(myarea.getArea());
+    console.log(myarea.height);    
+
+</script>
+
+</html>
