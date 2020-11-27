@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const SETTING = {
+        name: "LUCKY LOTTO!",
+        count: 6,
+        maxNumber: 45
+    }    
+    let repeatCount;
+    function getRandomNumber() {
+
+        let numSet = new Set();
+        repeatCount = 0;        
+        let { count, maxNumber } = SETTING;
+
+        // 6개 숫자 나올때까지 반복
+        while (numSet.size < count) {
+            // 랜덤으로 숫자뽑기            
+            // Math.floor( ( Math.random() * (최대값 - 최소값) + 최소값 ) );
+            let RandNum = Math.floor((Math.random() * (maxNumber - 1) + 1));            
+            // 중복확인
+            if (!numSet.has(RandNum)) {
+                numSet.add(RandNum);
+            }
+            // 몇번 돌았는지 확인
+            repeatCount++;
+        }
+        return [...Array.from(numSet)];
+    }
+
+    console.log(getRandomNumber());
+    console.log(repeatCount);
+</script>
+
+</html>
