@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Context</title>
+</head>
+<body> 
+    <p>mydiv</p>
+</body>
+<script>
+    // arrow function
+    // this context of Arrow function
+
+    // const myObj = {
+    //     runTimeout() {
+    //         setTimeout(function() {
+    //             console.log(this === window);
+    //             this.printData();
+    //         }.bind(this), 200);
+    //     },
+
+    //     printData() {
+    //         console.log("hello world");
+    //     }
+    // }
+
+    // true, hello world
+
+    // const myObj = {
+    //     runTimeout() {
+    //         setTimeout(() => {
+    //             console.log(this === window);
+    //             this.printData();
+    //         }, 200);
+    //     },
+
+    //     printData() {
+    //         console.log("hello world");
+    //     }
+    // }
+
+    // // false, hello world
+
+    // myObj.runTimeout();
+
+    const el = document.querySelector("p");
+
+    // const myObj = {
+    //     register() {
+    //         el.addEventListener("click", function(evt){
+    //             this.printData();
+    //         }.bind(this));
+    //     },
+
+    //     printData() {
+    //         console.log("clicked!!");
+    //     }
+    // }
+
+    const myObj = {
+        register() {
+            el.addEventListener("click", (evt) =>{
+                this.printData(evt.target);
+            });
+        },
+
+        printData() {
+            console.log("clicked!!", el.innerText);
+        }
+    }
+
+    myObj.register();
+
+</script>
+
+</html>

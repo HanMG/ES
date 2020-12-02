@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow</title>
+</head>
+<body> 
+</body>
+<script>
+    // arrow function
+
+    // setTimeout(function() {
+    //     console.log("settimeout");
+    // }, 1000);
+
+
+    // setTimeout( () => {
+    //     console.log("settimeout arrow");        
+    // }, 1000);
+
+    // let newArr = [1,2,3,4,5].map(function(value, index, object) {
+    //     return value * 2;
+    // });
+
+    let newArr = [1,2,3,4,5].map((v) => (v * 2));
+
+    console.log("arrow " , newArr);
+
+</script>
+
+</html>
