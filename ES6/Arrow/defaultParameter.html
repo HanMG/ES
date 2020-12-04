@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DefaultParameter</title>
+</head>
+<body>     
+</body>
+<script>
+    // 변수에 기본값 설정가능!!
+    function sum(value, size = {value: 1}){        
+        return value * size.value;
+    }
+
+    console.log(sum(3, {value: 3})); // 9
+    console.log(sum(3)); // default 값이 적용 3
+    console.log(sum(3, {value: 0})); // 0
+</script>
+
+</html>

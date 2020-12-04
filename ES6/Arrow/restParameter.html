@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestParameter</title>
+</head>
+<body>     
+</body>
+<script>
+    // rest parameters ...매개변수 => 배열로 받음
+    function checkNum(...argArray){        
+        console.log(argArray);
+        console.log(toString.call(argArray));
+        const result = argArray.every((v) => typeof v === "number");
+        console.log(result); // 마지막이 숫자가 아니므로 false
+    }
+
+    //const result = checkNum(10,2,"66");
+    const result = checkNum(10,2,3,4,5,"66");
+</script>
+
+</html>
