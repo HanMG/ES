@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setPrototypeOf1</title>
+</head>
+<body>     
+</body>
+<script>
+    // setProtoTypeOf   
+    // protoype chain 생성하기
+
+    const healthObj = {
+        showHealth : function(){
+            console.log("오늘 운동 시간 : " +this.healthTime);
+        },
+        setHealth : function(newTime) {
+            this.healthTime = newTime;
+        }
+    }
+
+    // child obj
+    const healthChildObj = {
+        getAge: function(){
+            return this.age;
+        }
+    }
+
+    Object.setPrototypeOf(healthChildObj, healthObj);
+
+    const childObj = Object.setPrototypeOf({
+        age: 22
+    }, healthChildObj);
+
+    childObj.setHealth("19:02");
+    childObj.showHealth();
+    
+    //console.log("childObj is ", childObj );
+    
+
+
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object assign</title>
+</head>
+<body>     
+</body>
+<script>
+    // Object assign 메서드.    
+
+    const healthObj = {
+        showHealth : function(){
+            console.log("오늘 운동 시간 : " +this.healthTime);
+        }
+    }
+
+    // prototype을 포함한 객체를 만들수 있음
+    const myHealth = Object.assign(Object.create(healthObj),{
+        name : "moon",
+        lastTime : "11:20"
+    });
+
+    // myHealth.healthTime = "11:20";
+    // myHealth.name = "moon";
+    console.log("myHealth is", myHealth);
+
+
+</script>
+
+</html>

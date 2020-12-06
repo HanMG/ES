@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setPrototypeOf</title>
+</head>
+<body>     
+</body>
+<script>
+    // setProtoTypeOf   
+
+    const healthObj = {
+        showHealth : function(){
+            console.log("오늘 운동 시간 : " +this.healthTime);
+        },
+        setHealth : function(newTime) {
+            this.healthTime = newTime;
+        }
+    }
+
+    // // prototype을 포함한 객체를 만들수 있음
+    // const myHealth = {
+    //     name : "moon",
+    //     lastTime : "11:20"
+    // };
+    
+    // // protoype 객체 추가
+    // Object.setPrototypeOf(myHealth, healthObj);
+
+    const newObj = Object.setPrototypeOf({
+        name: "moon",
+        lastTime: "11:20"
+    }, healthObj);
+    
+    console.log(newObj);
+    
+
+
+</script>
+
+</html>

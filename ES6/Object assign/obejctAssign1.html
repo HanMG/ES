@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object assign</title>
+</head>
+<body>     
+</body>
+<script>
+    // Object assign 메서드.    
+
+    const previousObj = {
+        name : "moon",
+        lastTime : "11:20"
+    }
+
+    // 새로운 값이 있으면 대체하고 아니면 이전값 그대로 사용
+    // const myHealth = Object.assign({}, previousObj, {        
+    //     lastTime : "12:30",
+    //     age : 33
+    // });
+
+    const myHealth = Object.assign({}, previousObj, {});
+
+    // myHealth.healthTime = "11:20";
+    // myHealth.name = "moon";
+    console.log("myHealth is", myHealth);
+
+    // 둘의 값이 같아도 다른 객체
+    console.log(previousObj === myHealth);
+
+
+</script>
+
+</html>
